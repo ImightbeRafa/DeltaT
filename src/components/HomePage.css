@@ -1,0 +1,288 @@
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #ffffff; /* Change background to white */
+    color: #000000; /* Change text color to black */
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: -1;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px), /* Change to black */
+        linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: #333333; /* Change hover color to dark gray */
+    text-shadow: 0 0 5px #333333, 0 0 10px #333333; /* Change shadow color */
+}
+
+.homepage {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Change to a slightly transparent white */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Change shadow color to black */
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Change to white */
+    margin-bottom: 50px;
+    border-bottom: 1px solid #000000; /* Change border color to black */
+}
+
+.logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px #000000); /* Change shadow color to black */
+}
+
+.nav .nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav .nav-links li a {
+    font-size: 1.1rem;
+    font-weight: 500;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.nav .nav-links li a:hover {
+    opacity: 1;
+}
+
+.main-content {
+    padding: 30px;
+    background-color: #f0f0f0; /* Change to light gray */
+    border-radius: 8px;
+}
+
+.hero-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #000000; /* Change button background to black */
+    color: #ffffff; /* Change button text color to white */
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #333333; /* Change hover color to dark gray */
+}
+
+.mission-section {
+    margin-bottom: 50px;
+}
+
+.featured-projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    background-color: #ffffff; /* Change card background to white */
+    padding: 20px;
+    flex: 1;
+    min-width: 280px;
+    border-radius: 5px;
+    border: 1px solid #000000; /* Change border color to black */
+}
+
+.card:hover {
+    border-color: #333333; /* Change hover border color to dark gray */
+}
+
+h1, h2 {
+    color: #000000; /* Change heading color to black */
+    text-shadow: none; /* Remove shadow */
+}
+
+.footer {
+    background-color: rgba(255, 255, 255, 0.9); /* Change footer background to white */
+    padding: 20px;
+    text-align: center;
+    margin-top: 60px;
+    border-top: 1px solid #000000; /* Change border color to black */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links li a {
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+.footer-links li a:hover {
+    opacity: 1;
+}
+
+nav {
+    width: 100%;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* This allows menu items to wrap on smaller screens */
+    gap: 20px;
+}
+
+.menu li {
+    margin: 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #000000; /* Change menu link color to black */
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.menu li a:hover {
+    color: #333333; /* Change hover color to dark gray */
+    text-shadow: 0 0 5px #333333, 0 0 10px #333333; /* Change shadow color */
+}
+
+main {
+    position: relative;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.1), /* Change to black */
+        rgba(0, 0, 0, 0.1) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    pointer-events: none;
+}
+
+/* Binary rain animation */
+@keyframes binary-rain {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.binary-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.binary-drop {
+    position: absolute;
+    color: #000000; /* Change binary rain color to black */
+    font-size: 14px;
+    line-height: 1;
+    animation: binary-rain 10s linear infinite;
+    opacity: 0.5;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 80%; /* Adjust this value as needed for smaller screens */
+    }
+}
+
+.blog {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.blog-post {
+    background-color: rgba(255, 255, 255, 0.9); /* Change to a slightly transparent white */
+    border: 1px solid #000000; /* Change border color to black */
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.blog-post h2 {
+    color: #000000; /* Change heading color to black */
+}
+
+.blog-post img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
